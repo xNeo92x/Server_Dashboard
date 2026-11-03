@@ -1,0 +1,4 @@
+/target/
+*.core
+core
+.DS_Store
