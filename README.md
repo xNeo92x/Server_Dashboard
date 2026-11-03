@@ -1,5 +1,9 @@
 # Server Dashboard
 
+## Vorschau
+
+![Server Dashboard Vorschau](https://raw.githubusercontent.com/xNeo92x/Server_Dashboard/main/docs/server-dashboard-preview.jpg)
+
 Native Linux-Anwendung zur übersichtlichen Darstellung der Gesundheit mehrerer
 Server aus **N-able N-sight RMM**. Das Projekt ist für einen dauerhaft an einem
 Fernseher betriebenen Raspberry Pi bzw. Debian-Rechner gedacht.
