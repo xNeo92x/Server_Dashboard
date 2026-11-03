@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Server Dashboard
+Comment=Native N-able N-sight RMM server health dashboard
+Exec=/opt/server-dashboard/server-dashboard --fullscreen
+Icon=utilities-system-monitor
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=true
