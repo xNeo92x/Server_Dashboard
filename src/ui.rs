@@ -73,7 +73,7 @@ pub fn build(app: &gtk::Application, args: Args) {
         let session = session.clone();
         let login = login.clone();
         let tx = tx.clone();
-        login.connect_button.connect_clicked(move |_| {
+        login.connect_button.clone().connect_clicked(move |_| {
             if session.borrow().busy {
                 return;
             }
@@ -153,7 +153,7 @@ pub fn build(app: &gtk::Application, args: Args) {
         let session = session.clone();
         let dashboard = dashboard.clone();
         let tx = tx.clone();
-        dashboard.refresh.connect_clicked(move |_| {
+        dashboard.refresh.clone().connect_clicked(move |_| {
             let mut state = session.borrow_mut();
             if state.busy || state.demo {
                 return;
@@ -234,7 +234,7 @@ pub fn build(app: &gtk::Application, args: Args) {
         window.fullscreen();
     }
     {
-        let window = window.clone();
+        let key_window = window.clone();
         let fullscreen_state = fullscreen_state.clone();
         let keys = gtk::EventControllerKey::new();
         keys.connect_key_pressed(move |_, key, _, _| {
@@ -242,15 +242,15 @@ pub fn build(app: &gtk::Application, args: Args) {
                 let next = !fullscreen_state.get();
                 fullscreen_state.set(next);
                 if next {
-                    window.fullscreen();
+                    key_window.fullscreen();
                 } else {
-                    window.unfullscreen();
+                    key_window.unfullscreen();
                 }
                 return glib::Propagation::Stop;
             }
             if key == gdk::Key::Escape && fullscreen_state.get() {
                 fullscreen_state.set(false);
-                window.unfullscreen();
+                key_window.unfullscreen();
                 return glib::Propagation::Stop;
             }
             glib::Propagation::Proceed
