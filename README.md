@@ -2,7 +2,7 @@
 
 ## Vorschau
 
-![Server Dashboard Vorschau](docs/server-dashboard-preview.jpg)
+![Server Dashboard Vorschau](docs/server-dashboard-preview.webp)
 
 Native Linux-Anwendung zur übersichtlichen Darstellung der Gesundheit mehrerer
 Server aus **N-able N-sight RMM**. Das Projekt ist für einen dauerhaft an einem
